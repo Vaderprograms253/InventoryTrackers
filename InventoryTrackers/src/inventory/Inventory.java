@@ -4,7 +4,7 @@ package inventory;
  * This interface provides a to-do list of methods that allows a class which implements Inventory to
  * keep count of the number of characters
  *
- * @author Susan Uland
+ * @author Xavier Denson
  * @version 1.0
  */
 public interface Inventory {

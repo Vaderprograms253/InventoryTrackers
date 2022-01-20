@@ -55,8 +55,15 @@ public class LetterInventory implements Inventory {
 
    @Override
    public int get(char c) {
-      return 0;
+      c = Character.toLowerCase(c);
+      if(Character.isLetter(c)){
+      return letters[c - 'a'];
+      }
+      else {
+         return 0;
+      }
    }
+
 
    public void set(char letter, int count){
       letter = Character.toLowerCase(letter);
@@ -67,7 +74,7 @@ public class LetterInventory implements Inventory {
 
    @Override
    public boolean contains(char c) {
-      return false;
+      return get(c) > 0;
    }
 
 
@@ -81,7 +88,7 @@ public class LetterInventory implements Inventory {
 
    @Override
    public boolean isEmpty() {
-      return false;
+      return this.size() ==0;
    }
 
 

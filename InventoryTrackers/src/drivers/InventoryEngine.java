@@ -11,10 +11,11 @@ public class InventoryEngine {
    public static void main(String [] args) {
 
       LetterInventory inventory = new LetterInventory();
-      inventory.add('a');
-      System.out.println(inventory.size());
-      inventory.set('a', 5);
-      System.out.println(inventory.size());
+      inventory.add('b');
+      //System.out.println(inventory.size());
+     // inventory.set('a', 5);
+      System.out.println(inventory.get('a'));
+      inventory.get('b');
       //ABCInventory inventory = new ABCInventory();
       //testInventory(inventory);
 

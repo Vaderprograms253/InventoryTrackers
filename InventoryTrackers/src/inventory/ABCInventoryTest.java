@@ -6,8 +6,12 @@ import static org.junit.Assert.*;
 
 public class ABCInventoryTest {
 
+    private static ABCInventory inventoryOne = new ABCInventory();
+    private static ABCInventory inventoryTwo = new ABCInventory();
+
     @Test
     public void add() {
+        //assertEquals(1,'c');
     }
 
     @Test

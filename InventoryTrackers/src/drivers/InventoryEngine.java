@@ -9,14 +9,20 @@ import inventory.*;
 public class InventoryEngine {
 
    public static void main(String [] args) {
-      ABCInventory inventory = new ABCInventory();
-      testInventory(inventory);
 
-       populate(inventory,"InventoryTrackers/data/hello.txt");
-      System.out.println("Expected [A=0, B=0, C=0] size=0 "+inventory+" size="+inventory.size());
+      LetterInventory inventory = new LetterInventory();
+      inventory.add('a');
+      System.out.println(inventory.size());
+      inventory.set('a', 5);
+      System.out.println(inventory.size());
+      //ABCInventory inventory = new ABCInventory();
+      //testInventory(inventory);
 
-      populate(inventory,"InventoryTrackers/data/alphabet.txt");
-      System.out.println("Expected [A=5, B=5, C=5] size=15 "+inventory+" size="+inventory.size());
+      // populate(inventory,"InventoryTrackers/data/hello.txt");
+     // System.out.println("Expected [A=0, B=0, C=0] size=0 "+inventory+" size="+inventory.size());
+
+      //populate(inventory,"InventoryTrackers/data/alphabet.txt");
+      //System.out.println("Expected [A=5, B=5, C=5] size=15 "+inventory+" size="+inventory.size());
 
       //populate(inventory,"data/ipsum.txt");
       //System.out.println("Expected [A=7, B=1, C=4] size=12 "+inventory+" size="+inventory.size());

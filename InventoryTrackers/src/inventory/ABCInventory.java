@@ -126,22 +126,10 @@ public class ABCInventory implements Inventory  {
          throw new IllegalArgumentException();
       }
 
-      switch (c){
-         case 'a':
-         case 'A':
-
-               aCount = count;
-            break;
-         case 'b':
-         case 'B':
-
-               bCount = count;
-            break;
-         case 'c':
-         case 'C':
-
-               cCount = count;
-            break;
+      switch (c) {
+         case 'a', 'A' -> aCount = count;
+         case 'b', 'B' -> bCount = count;
+         case 'c', 'C' -> cCount = count;
       }
 
    }

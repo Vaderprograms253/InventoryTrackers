@@ -42,12 +42,15 @@ public class LetterInventory implements Inventory {
    }
 
    /**
-    *
+    * removes a letter from the inventory
     *
     * @param letter to subtract in inventory
     */
    public void subtract(char letter){
-
+      letter = Character.toLowerCase(letter);
+      if (Character.isLetter(letter)){
+         letters[letter -'a']--;
+      }
    }
 
    @Override
@@ -56,7 +59,10 @@ public class LetterInventory implements Inventory {
    }
 
    public void set(char letter, int count){
-
+      letter = Character.toLowerCase(letter);
+      if (Character.isLetter(letter)){
+         letters[letter -'a'] = count;
+      }
    }
 
    @Override
